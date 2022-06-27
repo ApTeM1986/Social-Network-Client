@@ -85,6 +85,24 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
    
+    // func that open image in new VC for full screen
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let fullScreenView = UIView(frame: self.view.bounds)
+        let fullScreenImageView = UIImageView(frame: fullScreenView.frame)
+       fullScreenView.addSubview(fullScreenImageView)
+        let image = dataArrayFriends[indexPath.row].photo
+       fullScreenImageView.image = image
+       self.view.addSubview(fullScreenView)
+       let tap = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
+       fullScreenView.addGestureRecognizer(tap)
+   }
+   @objc func onTap(_ recognizer: UITapGestureRecognizer) {
+      
+       guard let targetView = recognizer.view else {return}
+       targetView.removeFromSuperview()
+   }
+    
+   
     
     
 }
