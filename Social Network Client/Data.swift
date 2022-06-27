@@ -12,3 +12,11 @@ struct Friends {
     var city: String
     var photo: UIImage?
 }
+
+var photoArrayProfile = [UIImage]()
+
+func addPhototoArray() {
+    for photo in 1...12 {
+        photoArrayProfile.append(UIImage(named: "nature\(photo)")!)
+    }
+}

@@ -10,15 +10,33 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Social_Network_Client" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="450" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="450" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="din-zb-lPU">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="06Z-mf-Z4E"/>
+                            <constraint firstAttribute="height" constant="75" id="kxM-ri-TDf"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="450" height="100"/>
-            <point key="canvasLocation" x="427.536231884058" y="125.89285714285714"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="din-zb-lPU" secondAttribute="bottom" id="9iz-Mw-Tqu"/>
+                <constraint firstAttribute="trailing" secondItem="din-zb-lPU" secondAttribute="trailing" id="nmb-AB-jkc"/>
+                <constraint firstItem="din-zb-lPU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uaa-FX-vHo"/>
+                <constraint firstItem="din-zb-lPU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xdh-Z6-30l"/>
+            </constraints>
+            <size key="customSize" width="319" height="206"/>
+            <connections>
+                <outlet property="imageView" destination="din-zb-lPU" id="vSW-5D-jOd"/>
+            </connections>
+            <point key="canvasLocation" x="331.8840579710145" y="160.37946428571428"/>
         </collectionViewCell>
     </objects>
 </document>
