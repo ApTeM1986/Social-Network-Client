@@ -14,6 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var imagePhoto: UIImageView!
     
     @IBOutlet weak var likeCounter: UILabel!
+    var isPressed: Bool = false
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -33,5 +34,16 @@ class TableViewCell: UITableViewCell {
     
    
     @IBAction func likeButtonPressed(_ sender: Any) {
+        isPressed = !isPressed
+        NotificationCenter.default.post(name: NSNotification.Name("Liked"), object: counterOfLikes)
+        if isPressed {
+            counter += 1
+            counterOfLikes.text = String(counter)
+            likeOutlet.image = UIImage(systemName: "heart.fill")
+        } else {
+            counter -= 1
+            counterOfLikes.text = String(counter)
+            likeOutlet.image = UIImage(systemName: "heart")
+        }
     }
 }
