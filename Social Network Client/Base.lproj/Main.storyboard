@@ -164,8 +164,8 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-7b-o0f">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x7P-Sb-Jnp">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="1" id="x7P-Sb-Jnp">
+                                    <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -177,7 +177,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6n6-7b-o0f" firstAttribute="top" secondItem="TUj-QJ-KFR" secondAttribute="top" id="8CO-kZ-RFX"/>
-                            <constraint firstItem="TUj-QJ-KFR" firstAttribute="bottom" secondItem="6n6-7b-o0f" secondAttribute="bottom" id="hD9-VE-CTP"/>
+                            <constraint firstItem="6n6-7b-o0f" firstAttribute="centerY" secondItem="TUj-QJ-KFR" secondAttribute="centerY" id="aej-W8-173"/>
                             <constraint firstItem="TUj-QJ-KFR" firstAttribute="trailing" secondItem="6n6-7b-o0f" secondAttribute="trailing" id="mQ0-3a-qWY"/>
                             <constraint firstItem="6n6-7b-o0f" firstAttribute="leading" secondItem="TUj-QJ-KFR" secondAttribute="leading" id="sAv-kB-hca"/>
                         </constraints>
