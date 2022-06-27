@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
         self.view.addGestureRecognizer(recognizer)
     }
-    
+    // fghjf
     @objc func onTap(_ sender: Any) {
         self.view.endEditing(true)
     }
