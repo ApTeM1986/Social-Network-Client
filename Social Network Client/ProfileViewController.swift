@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
     
     let reusebleCell = "reusebleCell"
     
-    
+   
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController {
         collectionVC.delegate = self
       
     }
+  
     
     @IBAction func toLoginVC(_ sender: Any) {
     performSegue(withIdentifier: "exitSegue", sender: nil)
