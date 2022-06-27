@@ -69,6 +69,14 @@
                                     <constraint firstAttribute="width" constant="20" id="poV-tR-W2E"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-Oj-gU4">
+                                <rect key="frame" x="42" y="352" width="25" height="25"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="checkBoxButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04W-Q0-eAz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,7 +86,10 @@
                             <constraint firstItem="CVu-ax-Fwt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="BSH-KK-Opc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BQ4-9B-W9f" secondAttribute="trailing" id="G9e-fJ-RUM"/>
                             <constraint firstItem="man-zr-0QO" firstAttribute="leading" secondItem="8uM-YA-UvM" secondAttribute="trailing" constant="11.5" id="M4a-Dx-wra"/>
+                            <constraint firstItem="Wwv-Oj-gU4" firstAttribute="top" secondItem="jbM-9w-Qto" secondAttribute="bottom" constant="7" id="MX9-fu-DlT"/>
+                            <constraint firstItem="man-zr-0QO" firstAttribute="leading" secondItem="Wwv-Oj-gU4" secondAttribute="trailing" constant="9.5" id="N4X-fh-bBI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdR-ei-IPd" secondAttribute="trailing" constant="45" id="Sh8-wx-SrD"/>
+                            <constraint firstItem="Wwv-Oj-gU4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Wv2-eD-QHf"/>
                             <constraint firstItem="jbM-9w-Qto" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="XmJ-qQ-2oI"/>
                             <constraint firstItem="qdR-ei-IPd" firstAttribute="top" secondItem="BQ4-9B-W9f" secondAttribute="bottom" constant="120" id="Xu8-TM-NWo"/>
                             <constraint firstItem="C1r-uM-2cw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="YvE-BG-VTg"/>
@@ -89,6 +100,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yid-EJ-SXF" secondAttribute="trailing" constant="45" id="deV-C2-JAx"/>
                             <constraint firstItem="BQ4-9B-W9f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="eo8-3k-CUg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVu-ax-Fwt" secondAttribute="trailing" constant="45" id="fDa-yg-8dl"/>
+                            <constraint firstItem="C1r-uM-2cw" firstAttribute="top" secondItem="Wwv-Oj-gU4" secondAttribute="bottom" constant="10" id="hxQ-Zt-yWw"/>
                             <constraint firstItem="Yid-EJ-SXF" firstAttribute="top" secondItem="CVu-ax-Fwt" secondAttribute="bottom" constant="20" id="kab-Ur-6x2"/>
                             <constraint firstItem="CVu-ax-Fwt" firstAttribute="top" secondItem="qdR-ei-IPd" secondAttribute="bottom" constant="10" id="pNb-Sy-gdz"/>
                             <constraint firstItem="C1r-uM-2cw" firstAttribute="top" secondItem="8uM-YA-UvM" secondAttribute="bottom" constant="12" id="q93-li-6kn"/>
