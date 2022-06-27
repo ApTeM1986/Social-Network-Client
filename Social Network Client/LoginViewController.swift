@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
  
     @IBOutlet weak var checkBoxOutlet: UIImageView!
     var pressed: Bool = false
+    let toTabBarController = "toTabBarController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,11 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     @IBAction func pressedLoginButton(_ sender: Any) {
+        performSegue(withIdentifier: toTabBarController, sender: nil)
     }
-   // check box function
+   
+    
+    // check box function
     @IBAction func checkBoxButtonPressed(_ sender: Any) {
    if pressed == false {
             checkBoxOutlet.image = UIImage(systemName: "checkmark.square")
