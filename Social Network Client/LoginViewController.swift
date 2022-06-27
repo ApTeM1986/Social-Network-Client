@@ -19,17 +19,17 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         
-      
+      // adding gesturerecognizer to VC
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
         self.view.addGestureRecognizer(recognizer)
     }
-    // fghjf
+// func for gestureRecognizers
     @objc func onTap(_ sender: Any) {
         self.view.endEditing(true)
     }
     @IBAction func pressedLoginButton(_ sender: Any) {
     }
-    
+   // check box function
     @IBAction func checkBoxButtonPressed(_ sender: Any) {
    if pressed == false {
             checkBoxOutlet.image = UIImage(systemName: "checkmark.square")
