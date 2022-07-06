@@ -8,6 +8,7 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
+    
     @IBOutlet weak var friendsTableVC: UITableView!
     
     let reuseCellIdentifier = "reuseCellIdentifier"
@@ -86,14 +87,17 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     
    
     // func that open image in new VC for full screen
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let fullScreenView = UIView(frame: self.view.bounds)
         let fullScreenImageView = UIImageView(frame: fullScreenView.frame)
        fullScreenView.addSubview(fullScreenImageView)
         let image = dataArrayFriends[indexPath.row].photo
        fullScreenImageView.image = image
        self.view.addSubview(fullScreenView)
-       let tap = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
+       
+        // tap to close view
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
        fullScreenView.addGestureRecognizer(tap)
    }
    @objc func onTap(_ recognizer: UITapGestureRecognizer) {
@@ -112,12 +116,9 @@ extension FriendsViewController: UISearchResultsUpdating{
     }
     
     func filterContentForSearchText(_ searchText: String) {
-       
-        
         filteredData = dataArrayFriends.filter({ (search: Friends) -> Bool in
             return search.name.lowercased().contains(searchText.lowercased())
         })
-        
         friendsTableVC.reloadData()
     }
 }

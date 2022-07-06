@@ -20,3 +20,14 @@ func addPhototoArray() {
         photoArrayProfile.append(UIImage(named: "nature\(photo)")!)
     }
 }
+
+class Session {
+    static let shared = Session()
+    private init(){}
+    var token: String?
+    var userId: Int?
+    
+   
+    
+    
+}

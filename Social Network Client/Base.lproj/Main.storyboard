@@ -161,7 +161,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-7b-o0f">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6n6-7b-o0f">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="1" id="x7P-Sb-Jnp">
@@ -194,16 +194,19 @@
         <!--Tab Bar Controller-->
         <scene sceneID="0lV-KO-49u">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gbw-xP-etU" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gbw-xP-etU" customClass="TabBarController" customModule="Social_Network_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wtp-r9-Z6E"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ch3-W0-TMU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6a5-OR-Xdc" kind="relationship" relationship="viewControllers" id="spR-dl-eqZ"/>
+                        <outlet property="TabBar" destination="ch3-W0-TMU" id="Twq-uF-waG"/>
+                        <outlet property="tabBar" destination="ch3-W0-TMU" id="hJu-Ta-npG"/>
                         <segue destination="9pw-nc-8Tt" kind="relationship" relationship="viewControllers" id="cxt-nD-VRH"/>
+                        <segue destination="6a5-OR-Xdc" kind="relationship" relationship="viewControllers" id="spR-dl-eqZ"/>
                         <segue destination="c1E-sj-MCy" kind="relationship" relationship="viewControllers" id="a11-xm-H2a"/>
                     </connections>
                 </tabBarController>
@@ -214,7 +217,7 @@
         <!--Gallery-->
         <scene sceneID="mOt-yA-nOX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6a5-OR-Xdc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6a5-OR-Xdc" customClass="NavigationViewController" customModule="Social_Network_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gallery" image="photo.artframe" catalog="system" id="sQj-s7-l5d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="59k-fe-bwf">
@@ -223,6 +226,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="iconGalleryCV" destination="sQj-s7-l5d" id="eI1-QE-ia6"/>
                         <segue destination="JaU-F3-Oqb" kind="relationship" relationship="rootViewController" id="Kht-4i-gVN"/>
                     </connections>
                 </navigationController>
@@ -370,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qN8-Wl-xG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4402.898550724638" y="1080.8035714285713"/>
+            <point key="canvasLocation" x="3474" y="1011"/>
         </scene>
         <!--Friends-->
         <scene sceneID="8Zs-Tz-ha1">
@@ -394,7 +398,6 @@
         <!--Profile-->
         <scene sceneID="4Jx-Fa-t2Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GZb-vF-lYC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c1E-sj-MCy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="gearshape" catalog="system" id="Nid-ZG-7gG"/>
                     <toolbarItems/>
@@ -407,8 +410,9 @@
                         <segue destination="nqa-Y9-rMd" kind="relationship" relationship="rootViewController" id="w9E-KI-tct"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZb-vF-lYC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3492.753623188406" y="1080.8035714285713"/>
+            <point key="canvasLocation" x="2561" y="987"/>
         </scene>
     </scenes>
     <resources>
