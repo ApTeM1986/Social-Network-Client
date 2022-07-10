@@ -14,9 +14,9 @@
 		175E81842869AEFB00D43246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175E81832869AEFB00D43246 /* Assets.xcassets */; };
 		175E81872869AEFB00D43246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175E81852869AEFB00D43246 /* LaunchScreen.storyboard */; };
 		176453F52879ADDC0041920E /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176453F42879ADDC0041920E /* URLRequests.swift */; };
+		17645417287B07390041920E /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645416287B07390041920E /* Groups.swift */; };
 		17962D982874C4D1003F5A7B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17962D972874C4D1003F5A7B /* NavigationViewController.swift */; };
 		17C9AF682869CABE00D8E198 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9AF672869CABE00D8E198 /* FriendsViewController.swift */; };
-		17C9AF6A2869CACE00D8E198 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9AF692869CACE00D8E198 /* ProfileViewController.swift */; };
 		17C9AF6C2869CAE600D8E198 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9AF6B2869CAE600D8E198 /* GalleryViewController.swift */; };
 		17C9AF6E2869CF4600D8E198 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9AF6D2869CF4600D8E198 /* Data.swift */; };
 		17C9AF702869CF6000D8E198 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C9AF6F2869CF6000D8E198 /* Extension.swift */; };
@@ -37,9 +37,9 @@
 		175E81862869AEFB00D43246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175E81882869AEFB00D43246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		176453F42879ADDC0041920E /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
+		17645416287B07390041920E /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		17962D972874C4D1003F5A7B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		17C9AF672869CABE00D8E198 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		17C9AF692869CACE00D8E198 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		17C9AF6B2869CAE600D8E198 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		17C9AF6D2869CF4600D8E198 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		17C9AF6F2869CF6000D8E198 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -84,13 +84,13 @@
 				175E817C2869AEF900D43246 /* SceneDelegate.swift */,
 				175E817E2869AEF900D43246 /* LoginViewController.swift */,
 				175E81802869AEF900D43246 /* Main.storyboard */,
+				17645416287B07390041920E /* Groups.swift */,
 				17962D972874C4D1003F5A7B /* NavigationViewController.swift */,
 				17C9AF6D2869CF4600D8E198 /* Data.swift */,
 				176453F42879ADDC0041920E /* URLRequests.swift */,
 				17C9AF6F2869CF6000D8E198 /* Extension.swift */,
 				17C9AF792869CFA200D8E198 /* Cells */,
 				17C9AF672869CABE00D8E198 /* FriendsViewController.swift */,
-				17C9AF692869CACE00D8E198 /* ProfileViewController.swift */,
 				17C9AF6B2869CAE600D8E198 /* GalleryViewController.swift */,
 				17C9AF7A286AD60C00D8E198 /* readme.swift */,
 				175E81832869AEFB00D43246 /* Assets.xcassets */,
@@ -188,9 +188,9 @@
 				17C9AF6E2869CF4600D8E198 /* Data.swift in Sources */,
 				17C9AF682869CABE00D8E198 /* FriendsViewController.swift in Sources */,
 				176453F52879ADDC0041920E /* URLRequests.swift in Sources */,
+				17645417287B07390041920E /* Groups.swift in Sources */,
 				17C9AF732869CF7F00D8E198 /* CollectionViewCell.swift in Sources */,
 				175E817F2869AEF900D43246 /* LoginViewController.swift in Sources */,
-				17C9AF6A2869CACE00D8E198 /* ProfileViewController.swift in Sources */,
 				17C9AF772869CF9B00D8E198 /* TableViewCell.swift in Sources */,
 				17C9AF6C2869CAE600D8E198 /* GalleryViewController.swift in Sources */,
 				175E817B2869AEF900D43246 /* AppDelegate.swift in Sources */,
