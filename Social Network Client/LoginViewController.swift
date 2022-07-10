@@ -6,45 +6,58 @@
 //
 
 import UIKit
+import WebKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var loginTextOulter: UITextField!
-    @IBOutlet weak var passTextOutlet: UITextField!
- 
-    @IBOutlet weak var checkBoxOutlet: UIImageView!
-    var pressed: Bool = false
-    let toTabBarController = "toTabBarController"
+    @IBOutlet weak var loginView: WKWebView! {
+        didSet {
+            loginView.navigationDelegate = self
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let loginRequest = LoginRequest()
         
+        guard let url = loginRequest.requestList().url else { return }
         
-      // adding gesturerecognizer to VC
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
-        self.view.addGestureRecognizer(recognizer)
-    }
-// func for gestureRecognizers
-    @objc func onTap(_ sender: Any) {
-        self.view.endEditing(true)
-    }
-    @IBAction func pressedLoginButton(_ sender: Any) {
-        performSegue(withIdentifier: toTabBarController, sender: nil)
+        print (url)
+        
+        let request = URLRequest(url: url)
+        loginView.load(request)
+    
     }
    
-    
-    // check box function
-    @IBAction func checkBoxButtonPressed(_ sender: Any) {
-   if pressed == false {
-            checkBoxOutlet.image = UIImage(systemName: "checkmark.square")
-           pressed = true
-       
-      } else {
-           checkBoxOutlet.image = UIImage(systemName: "square")
-           pressed = false
-       }
-        
-    
-    
 }
+
+extension LoginViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment else {
+            decisionHandler(.allow)
+        return
+        }
+
+        let params = fragment
+            .components(separatedBy: "&")
+            .map {$0.components(separatedBy: "=")}
+            .reduce([String: String]()) { result, param in
+                var dict = result
+                let key = param[0]
+                let value = param[1]
+                dict[key]=value
+                return dict
+            }
+
+        let token = params ["access_token"]
+
+        guard let token = token else { return }
+        Session.shared.token = token
+        
+        performSegue(withIdentifier: "toNextScreen", sender: self)
+        decisionHandler(.cancel)
+    }
 }

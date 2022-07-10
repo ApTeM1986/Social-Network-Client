@@ -20,9 +20,9 @@ class NavigationViewController: UINavigationController {
     
     @objc func getBadgeNumbers(notification:Notification){
         
-        let test = notification.object as? String
-        let ttt : String = String(test!)
-        iconGalleryCV.badgeValue = ttt
+        guard let test = notification.object as? String else { return }
+        
+        iconGalleryCV.badgeValue = test
         
     }
 

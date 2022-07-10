@@ -21,13 +21,13 @@ func addPhototoArray() {
     }
 }
 
+// SingleTon for user authorisation
 class Session {
     static let shared = Session()
     private init(){}
-    var token: String?
-    var userId: Int?
-    
-   
-    
+    var token: String = ""
+    var userId: Int = 6863663
     
 }
+
+
