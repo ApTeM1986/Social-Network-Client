@@ -8,7 +8,7 @@
 import Foundation
 import WebKit
 
-class LoginRequest {
+class UrlRequest {
     
     func requestList () -> URLComponents {
         var urlList = URLComponents()
@@ -25,11 +25,7 @@ class LoginRequest {
                 ]
        return urlList
     }
-}
-
-class RequestForFriendsList {
-    
-    func creatingRequest (){
+    func RequestForFriendList (){
         var urlList = URLComponents()
         urlList.scheme = "https"
         urlList.host = "api.vk.com"
@@ -55,10 +51,8 @@ class RequestForFriendsList {
         }
         .resume()
     }
-}
 
-class RequestForPhoto {
-    func creatingRequest () {
+    func RequestForPhoto () {
         var urlList = URLComponents()
         urlList.scheme = "https"
         urlList.host = "api.vk.com"
@@ -83,9 +77,7 @@ class RequestForPhoto {
         }
         .resume()
     }
-}
-class RequestForGroup {
-    func creatingRequest () {
+    func RequestForGroups () {
         var urlList = URLComponents()
         urlList.scheme = "https"
         urlList.host = "api.vk.com"
@@ -112,10 +104,7 @@ class RequestForGroup {
         }
         .resume()
     }
-}
-
-class RequestForGroupSearch {
-    func creatingRequest () {
+    func RequestForGroupSearch () {
         var urlList = URLComponents()
         urlList.scheme = "https"
         urlList.host = "api.vk.com"

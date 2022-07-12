@@ -16,8 +16,8 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        let request = RequestForFriendsList()
-        request.creatingRequest()
+        let request = UrlRequest()
+        request.RequestForFriendList()
     
     }
     

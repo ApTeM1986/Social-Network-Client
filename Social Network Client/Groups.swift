@@ -12,15 +12,15 @@ class Groups: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
           
-        let request = RequestForGroup()
-        request.creatingRequest()
+        let request = UrlRequest()
+        request.RequestForGroups()
     }
     
 
    
     @IBAction func searchInGroup(_ sender: Any) {
-    let request = RequestForGroupSearch()
-        request.creatingRequest()
+    let request = UrlRequest()
+        request.RequestForGroupSearch()
         
     }
     
