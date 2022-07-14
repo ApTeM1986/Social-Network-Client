@@ -21,9 +21,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let loginRequest = LoginRequest()
+        let loginRequest = UrlRequest()
         
-        guard let url = loginRequest.requestList().url else { return }
+        guard let url = loginRequest.requestLogin().url else { return }
         
         print (url)
         

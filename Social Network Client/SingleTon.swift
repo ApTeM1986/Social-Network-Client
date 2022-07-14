@@ -7,27 +7,19 @@
 
 import UIKit
 
-struct Friends {
-    var name: String
-    var city: String
-    var photo: UIImage?
-}
 
-var photoArrayProfile = [UIImage]()
 
-func addPhototoArray() {
-    for photo in 1...12 {
-        photoArrayProfile.append(UIImage(named: "nature\(photo)")!)
-    }
-}
+
 
 // SingleTon for user authorisation
+
 class Session {
+    
     static let shared = Session()
     private init(){}
     var token: String = ""
     var userId: Int = 6863663
-    
+
 }
 
 
