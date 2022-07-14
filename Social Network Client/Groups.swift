@@ -10,17 +10,16 @@ import UIKit
 class Groups: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-          
+        super.viewDidLoad()         
         let request = UrlRequest()
-        request.RequestForGroups()
+        request.requestForGroups()
     }
     
 
    
     @IBAction func searchInGroup(_ sender: Any) {
     let request = UrlRequest()
-        request.RequestForGroupSearch()
+        request.requestForGroupSearch()
         
     }
     

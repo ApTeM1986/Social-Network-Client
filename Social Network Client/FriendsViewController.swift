@@ -17,7 +17,7 @@ class FriendsViewController: UIViewController {
         super.viewDidLoad()
      
         let request = UrlRequest()
-        request.RequestForFriendList()
+        request.requestForFriendList()
     
     }
     

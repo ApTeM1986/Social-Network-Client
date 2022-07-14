@@ -14,7 +14,8 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let request = UrlRequest()
-        request.RequestForPhoto()
+        request.requestForPhoto()
+        
     }
     
 
